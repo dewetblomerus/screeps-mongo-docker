@@ -1,0 +1,30 @@
+version: '3'
+services:
+  screeps:
+    build: .
+    container_name: screeps
+    hostname: screeps
+    environment:
+      - STEAM_KEY=${STEAM_KEY}
+    volumes:
+      - ./data:/screeps
+    ports:
+      - 21025:21025
+    depends_on:
+      - mongo
+      - redis
+    restart: always
+
+  mongo:
+    container_name: mongo
+    image: mongo
+    volumes:
+      - ./mongo-data:/data/db             
+    restart: always  
+
+  redis:
+    container_name: redis
+    image: redis
+    volumes:
+      - ./redis-data:/data             
+    restart: always    
