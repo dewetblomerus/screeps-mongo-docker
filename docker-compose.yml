@@ -6,6 +6,9 @@ services:
     hostname: screeps
     environment:
       - STEAM_KEY=${STEAM_KEY}
+      - PUID=1000
+      - PGID=1000
+      - TZ=Africa/Johannesburg
     volumes:
       - ./data:/screeps
     ports:
@@ -28,3 +31,4 @@ services:
     volumes:
       - ./redis-data:/data             
     restart: always    
+

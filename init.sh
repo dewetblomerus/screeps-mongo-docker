@@ -11,6 +11,7 @@ echo '[redis]' >> data/.screepsrc
 echo 'host = redis' >> data/.screepsrc
 
 docker-compose up -d
-echo 'run docker exec -it screeps screeps cli'
-echo 'enter system.resetAllData() into the screeps cli'
-echo 'take a look at https://github.com/ScreepsMods/screepsmod-tickrate'
+echo 'run the following:'
+echo 'docker exec -it screeps screeps cli'
+echo 'system.resetAllData()'
+echo 'setTickRate(50)'
