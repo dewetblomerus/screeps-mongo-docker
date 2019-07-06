@@ -6,5 +6,6 @@ edit .env to have your steam api key which you can find here https://steamcommun
 sudo ./init.sh
 
 docker exec -it screeps screeps cli
+system.resetAllData()
 bots.removeUser('MichaelbBot');
 echo 'setTickRate(50)'
